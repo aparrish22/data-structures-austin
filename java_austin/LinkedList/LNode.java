@@ -2,19 +2,24 @@ package java_austin.LinkedList;
 
 public class LNode<T> extends Node<T> {
     
-    private LNode<T> pointer;
+    private LNode<T> next;
+
+    public LNode() {
+        setData(null);
+        next = null;
+    }
 
     public LNode(T data, LNode<T> node) {
         setData(data);
-        node = pointer;
+        node = next;
     }
 
-    public LNode<T> getPointer() {
-        return pointer;
+    public LNode<T> getNext() {
+        return next;
     }
     
-    public void setPointer(LNode<T> node) {
-        this.pointer = node;
+    public void setLink(LNode<T> node) {
+        this.next = node;
     }
 
 }

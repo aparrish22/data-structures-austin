@@ -20,7 +20,7 @@ import java.util.Iterator;
  * to python's 'default arguments' when passing args/params.
  * tail is referred to the last node in the list.
  */
-public class IndexedLinkedList<T> implements IndexedList<T> {
+public class IndexedLinkedList<T> implements IndexedList<T>, Iterable<T> {
 
     /*
      * diamond type generic <>, <T>, either or 
@@ -279,10 +279,13 @@ public class IndexedLinkedList<T> implements IndexedList<T> {
         return false;
     }
 
+    public IndexedLNode<T> getHead() { return head; }
+
+    public IndexedLNode<T> getTail() { return tail; }
+    
     @Override
     public Iterator<T> iterator() {
-        // TODO Auto-generated method stub
-        return null;
+        return new IndexedLinkedListIterator<T>(this);
     }
 
     // O(n) linear search, removal, & re-index (3n)

@@ -1,4 +1,4 @@
-package java_austin.LinkedList;
+package java_austin.IndexedLinkedList;
 
 public class LNode<T> extends Node<T> {
     

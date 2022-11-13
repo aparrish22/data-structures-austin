@@ -1,4 +1,4 @@
-package java_austin.LinkedList;
+package java_austin.IndexedLinkedList;
 
 import java.util.Iterator;
 

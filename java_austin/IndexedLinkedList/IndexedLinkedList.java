@@ -3,9 +3,9 @@ package java_austin.IndexedLinkedList;
 import java.util.Iterator;
 
 /*
- * TODO-List
+ * TODO
  * 
- * Unit Testing my Implementation of isLL with Java
+ * JUnit Testing my Implementation of isLL with Java
  */
 
 /*

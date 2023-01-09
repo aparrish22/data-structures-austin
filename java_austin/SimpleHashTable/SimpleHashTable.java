@@ -6,7 +6,7 @@ import java.util.LinkedList;
 // collisions solved with Separate Chaining
 public class SimpleHashTable<K, V> {
     
-    private LinkedList[] data;
+    private LinkedList<Pair<K,V>>[] data;
     private int size;
 
     public SimpleHashTable(int size) {
@@ -19,7 +19,7 @@ public class SimpleHashTable<K, V> {
         int index = convertToIndex(hashCode);
         Pair<K,V> dataPair = new Pair<>(key,value);
         
-        LinkedList list = data[index];
+        LinkedList<Pair<K,V>> list = data[index];
         return list.add(dataPair);
         
     }

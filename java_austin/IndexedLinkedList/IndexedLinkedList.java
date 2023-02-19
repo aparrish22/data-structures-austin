@@ -2,11 +2,6 @@ package java_austin.IndexedLinkedList;
 
 import java.util.Iterator;
 
-/*
- * TODO
- * 
- * JUnit Testing my Implementation of isLL with Java
- */
 
 /*
  * Singly Linked List
@@ -394,7 +389,13 @@ public class IndexedLinkedList<T> implements IndexedList<T>, Iterable<T> {
             prevNode.setLink(null);
             size--;
         } else if (index == head.getIndex()) { // remove head
-        
+            current = head.getNext();
+            head.setLink(null);
+            while (current != null) {
+                int i = 0;
+                current.setIndex(i);
+                current = current.getNext();
+            }
         } else { // somewhere in list
             prevNodeIndex = index - 1;
             nextNodeIndex = index + 1;

@@ -11,7 +11,7 @@ public class LNode<T> extends Node<T> {
 
     public LNode(T data, LNode<T> node) {
         setData(data);
-        node = next;
+        next = node;
     }
 
     public LNode<T> getNext() {

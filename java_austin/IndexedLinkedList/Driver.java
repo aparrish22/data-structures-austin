@@ -6,9 +6,20 @@ import java.util.HashSet;
 public class Driver {
     public static void main(String[] args) {
         
-        IndexedLinkedList myLinkedList = new IndexedLinkedList<>();
+        IndexedLinkedList<Character> myLinkedList = new IndexedLinkedList<Character>();
 
+        Character char1 = new Character("Beric");
+        Character char2 = new Character("Drah");
+        Character char3 = new Character("Miles");
 
+        myLinkedList.add(char1);
+        myLinkedList.add(char2);
+        myLinkedList.add(char3);
+
+        System.out.println("My LinkedList's size is: " + myLinkedList.listSize());
+        myLinkedList.removeIndex(0);
+        System.out.println("My LinkedList's size is: " + myLinkedList.listSize());
+        
 
     }
 }
@@ -24,13 +35,13 @@ class Character {
     // testing randomizing ID
     // inside constructor
     public Character(String name) {
-        this.name = name;
-        this.ID = Math.floor(Math.random() * 10);
+        this.NAME = name;
+        this.ID = (int) Math.random() * 10;
         this.level = 1;
     }
 
     public String getName() {
-        return this.name;
+        return this.NAME;
     }
 
     public int getID() {

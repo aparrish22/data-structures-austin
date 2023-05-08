@@ -411,7 +411,7 @@ public class IndexedLinkedList<T> implements IndexedList<T>, Iterable<T> {
             // re-index 
             current = prevNode;
             current = current.getNext();
-            current.setIndex(index);
+            current.setIndex(index); // TODO returns NullPointerException, need to fix
             currentNodeIndex = current.getIndex();
             while (current.getNext() != null) {
                 current = current.getNext();
